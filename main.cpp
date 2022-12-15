@@ -17,7 +17,7 @@ int main()
     bookShop1.DeleteBook(Book(299, 300, "Ivan Drach", 100, 1100));
 
     bookShop1.PriceTop();
-    bookShop1.NumberOfSalesTop();
+    bookShop1.NumberofsalesTop();
 
 
     return 0;
