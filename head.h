@@ -22,31 +22,31 @@ public:
         numberofsales_ = numberofsales;
     }
 
-    double GetPrice() 
+    double getPrice() 
     {
         return price_;
     }
-    void SetPrice(double price) 
+    void setPrice(double price) 
     {
         price_ = price;
     }
-    int GetNumberofpages() 
+    int getNumberofpages() 
     {
         return numberofpages_;
     }
-    string GetAuthor() 
+    string getAuthor() 
     {
         return author_;
     }
-    int GetQuantity() 
+    int getQuantity() 
     {
         return quantity_;
     }
-    int GetNumberofsales() 
+    int getNumberofsales() 
     {
         return numberofsales_;
     }
-    void SetNumberofsales(int numberofsales)
+    void getNumberofsales(int numberofsales)
     {
         numberofsales_ = numberofsales;
     }
@@ -64,7 +64,7 @@ public:
         {
             for (int j = i + 1; j < 100; j++)
             {
-                if (books[j].GetPrice() < books[i].GetPrice())
+                if (books[j].getPrice() < books[i].getPrice())
                 {
                     temp = books[i];
                     books[i] = books[j];
@@ -76,7 +76,7 @@ public:
         cout << "Top 3 prices:"  << endl;
         for (int i = 99; i > 96; i--)
         {
-            cout << books[i].GetAuthor() << " " << books[i].GetPrice() << endl;
+            cout << books[i].getAuthor() << " " << books[i].getPrice() << endl;
         }
     }
     void NumberofsalesTop()
@@ -86,7 +86,7 @@ public:
         {
             for (int j = i + 1; j < 100; j++)
             {
-                if (books[j].GetNumberofsales() < books[i].GetNumberofsales())
+                if (books[j].getNumberofsales() < books[i].getNumberofsales())
                 {
                     temp = books[i];
                     books[i] = books[j];
@@ -98,7 +98,7 @@ public:
         cout << "\nTop 3 Numbers of sales:" << endl;
         for (int i = 99; i > 96; i--)
         {
-            cout << books[i].GetAuthor() << " " << books[i].GetNumberofsales() << endl;
+            cout << books[i].getAuthor() << " " << books[i].getNumberofsales() << endl;
         }
     }
 
@@ -106,7 +106,7 @@ public:
     {
         for (int i = 0; i < 100; i++)
         {
-            if (books[i].GetAuthor() == "")
+            if (books[i].getAuthor() == "")
             {
                 books[i] = newBook;
                 return;
@@ -117,8 +117,8 @@ public:
     {
         for (int i = 0; i < 100; i++)
         {
-            if (books[i].GetAuthor() == newBook.GetAuthor() && books[i].GetNumberofpages() == newBook.GetNumberofpages() && books[i].GetNumberofsales() == newBook.GetNumberofsales()
-                && books[i].GetPrice() == newBook.GetPrice() && books[i].GetQuantity() == newBook.GetQuantity())
+            if (books[i].getAuthor() == newBook.getAuthor() && books[i].getNumberofpages() == newBook.getNumberofpages() && books[i].getNumberofsales() == newBook.getNumberofsales()
+                && books[i].getPrice() == newBook.getPrice() && books[i].getQuantity() == newBook.getQuantity())
             {
                 books[i] = Book();
                 return;
