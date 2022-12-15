@@ -6,20 +6,20 @@ class Book
 private:
 
     double price_;
-    int numberOfPages_;
+    int numberofpages_;
     string author_;
     int quantity_;
-    int numberOfSales_;
+    int numberofsales_;
 
 public:
     Book() {}
-    Book(double price,int numberOfPages,string author,int quantity,int numberOfSales)
+    Book(double price,int numberofpages,string author,int quantity,int numberofsales)
     {
         price_ = price;
-        numberOfPages_ = numberOfPages;
+        numberofpages_ = numberofpages;
         author_ = author;
         quantity_ = quantity;
-        numberOfSales_ = numberOfSales;
+        numberofsales_ = numberofsales;
     }
 
     double GetPrice() 
@@ -30,9 +30,9 @@ public:
     {
         price_ = price;
     }
-    int GetNumberOfpages() 
+    int GetNumberofpages() 
     {
-        return numberOfPages_;
+        return numberofpages_;
     }
     string GetAuthor() 
     {
@@ -42,13 +42,13 @@ public:
     {
         return quantity_;
     }
-    int GetNumberOfSales() 
+    int GetNumberofsales() 
     {
-        return numberOfSales_;
+        return numberofsales_;
     }
-    void SetNumberOfSales(int numberOfSales)
+    void SetNumberofsales(int numberofsales)
     {
-        numberOfSales_ = numberOfSales;
+        numberofsales_ = numberofsales;
     }
 };
 
@@ -79,14 +79,14 @@ public:
             cout << books[i].GetAuthor() << " " << books[i].GetPrice() << endl;
         }
     }
-    void NumberOfSalesTop()
+    void NumberofsalesTop()
     {
         Book temp;
         for (int i = 0; i < 100; i++)
         {
             for (int j = i + 1; j < 100; j++)
             {
-                if (books[j].GetNumberOfSales() < books[i].GetNumberOfSales())
+                if (books[j].GetNumberofsales() < books[i].GetNumberofsales())
                 {
                     temp = books[i];
                     books[i] = books[j];
@@ -98,7 +98,7 @@ public:
         cout << "\nTop 3 Numbers of sales:" << endl;
         for (int i = 99; i > 96; i--)
         {
-            cout << books[i].GetAuthor() << " " << books[i].GetNumberOfSales() << endl;
+            cout << books[i].GetAuthor() << " " << books[i].GetNumberofsales() << endl;
         }
     }
 
@@ -117,7 +117,7 @@ public:
     {
         for (int i = 0; i < 100; i++)
         {
-            if (books[i].GetAuthor() == newBook.GetAuthor() && books[i].GetNumberOfpages() == newBook.GetNumberOfpages() && books[i].GetNumberOfSales() == newBook.GetNumberOfSales()
+            if (books[i].GetAuthor() == newBook.GetAuthor() && books[i].GetNumberofpages() == newBook.GetNumberofpages() && books[i].GetNumberofsales() == newBook.GetNumberofsales()
                 && books[i].GetPrice() == newBook.GetPrice() && books[i].GetQuantity() == newBook.GetQuantity())
             {
                 books[i] = Book();
